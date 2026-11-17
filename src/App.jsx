@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home.jsx";
 import Sales from "./pages/Sales.jsx";
 import Services from "./pages/Services.jsx";
+import About from "./pages/About.jsx";
 
 const getRoute = () => (window.location.hash.replace(/^#/, "") || "/");
 
@@ -20,5 +21,6 @@ export default function App() {
 
   if (route.startsWith("/sales")) return <Sales />;
   if (route.startsWith("/services")) return <Services />;
+  if (route.startsWith("/about")) return <About />;
   return <Home />;
 }
