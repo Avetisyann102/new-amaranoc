@@ -258,3 +258,36 @@
   .pf-slider { margin: 40px 12px 0; }
   .amounts { grid-template-columns: repeat(2, auto); }
 }
+
+/* ---------- Services page ---------- */
+.services-main { max-width: 1202px; margin: 0 auto; padding: 0 24px 80px; }
+.svc-tabs-wrap { position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.svc-tabs { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; padding-right: 60px; }
+.svc-tabs::-webkit-scrollbar { display: none; }
+.svc-tab {
+  flex: 1 0 200px; background: none; border: none; border-bottom: 3px solid transparent;
+  display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 0 14px; font-size: 15px; color: var(--ink);
+}
+.svc-tab span { font-size: 28px; }
+.svc-tab.on { border-bottom-color: var(--orange); }
+.svc-next {
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; height: 40px;
+  border-radius: 50%; border: 1px solid #ccc; background: #fff; font-size: 16px; box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 16px; }
+.svc-card { background: #fff; border-radius: 22px; box-shadow: 0 2px 12px rgba(0,0,0,.07); overflow: hidden; display: flex; flex-direction: column; }
+.svc-card img { width: 100%; aspect-ratio: 390 / 280; object-fit: cover; display: block; border-radius: 22px; }
+.svc-body { padding: 18px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.svc-body h3 { margin: 0 0 10px; font-size: 19px; font-weight: 600; }
+.svc-body p {
+  margin: 0 0 18px; font-size: 16px; line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.svc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
+.svc-foot b { font-size: 20px; color: #4a5563; }
+.svc-foot button {
+  background: #fff; color: var(--ink); border: 1px solid var(--orange); border-radius: 999px; padding: 11px 26px; font-size: 15px;
+}
+.svc-foot button.on { background: var(--orange); color: #fff; }
+@media (max-width: 1000px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } .svc-tab { flex-basis: 150px; } }

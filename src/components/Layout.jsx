@@ -9,7 +9,7 @@ export function Header({ page, search, onSearch }) {
         <nav className="nav">
           <a className={page === "home" ? "active" : ""} href="#/">Գլխավոր</a>
           <a className={page === "sales" ? "active" : ""} href="#/sales">Ձեղչեր</a>
-          <a href="#">Ծառայություններ</a>
+          <a className={page === "services" ? "active" : ""} href="#/services">Ծառայություններ</a>
           <a href="#">Մեր մասին</a>
         </nav>
         <div className="header-right">

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./pages/Home.jsx";
 import Sales from "./pages/Sales.jsx";
+import Services from "./pages/Services.jsx";
 
 const getRoute = () => (window.location.hash.replace(/^#/, "") || "/");
 
@@ -18,5 +19,6 @@ export default function App() {
   }, []);
 
   if (route.startsWith("/sales")) return <Sales />;
+  if (route.startsWith("/services")) return <Services />;
   return <Home />;
 }
